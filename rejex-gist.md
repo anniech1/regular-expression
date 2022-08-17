@@ -8,7 +8,7 @@ For this gist I will be looking at the regex for searching HEX codes, which are 
 ``` 
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/.
 ``` 
-I will be explaining what the both literal and meta characters in this regex represent and what their usages are when a user is searching for HEX codes.
+I will be explaining what the literal and meta characters in this regex represent and what their usages are when a user is looking for HEX values.
 
 ## Table of Contents
 
@@ -16,13 +16,8 @@ I will be explaining what the both literal and meta characters in this regex rep
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -42,20 +37,14 @@ OR operators, `|`, are used so that the regex will match with two different type
 In our case, the OR operator splits our regex into two sections, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, into `[a-f0-9]{6}` and `[a-f0-9]{3})`. This makes it so expressions with either 6 characters or 3 characters can match the regex, as these are both accepted formats for HEX codes.
 
 ### Character Classes
+Character classes are 
 
-### Flags
 
 ### Grouping and Capturing
+Grouping and capturing refers to 
 
 ### Bracket Expressions
-
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+Bracket expressions are
 
 ## Author
 
