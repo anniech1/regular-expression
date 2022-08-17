@@ -27,7 +27,7 @@ I will be explaining what the both literal and meta characters in this regex rep
 ## Regex Components
 
 ### Anchors
-Anchors are used 
+Anchors are used to match the position of the string. The symbols `^` and `$` are anchors for each side of the expression, where `^a` searched for strings which begin with `a` and `b$` searches for strings which end with `b`. In the case of our HEX value regex, we can see this in the begining, where `^#` makes sure that the character string being selected begins with a `#`, and the `([a-f0-9]{6}|[a-f0-9]{3})$` makes sure that the string ends with a letter from a-f or a number from 0-9.
 
 ### Quantifiers
 
