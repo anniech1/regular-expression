@@ -1,10 +1,14 @@
-# Title (replace with your title)
+# Regex
 
-Introductory paragraph (replace this with your text)
+Regular expressions, or regex, are a series of characters which act as key to help us search text blocks for a matching pattern. They helps us effectivly search for phone numbers, emails, addresses, tracking ids, or any other pattern-base set of characters in large swaths of text.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+For this gist I will be looking at the regex for searching HEX codes, which are used in identifying and displaying colors. The regex for HEX values is:
+``` 
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/.
+``` 
+I will be explaining what the literal and meta characters in this regex represent and what their usages are when a user is searching for HEX codes.
 
 ## Table of Contents
 
@@ -46,4 +50,4 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+To visit my profile, click [here](https://github.com/anniech1)!
