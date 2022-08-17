@@ -8,7 +8,7 @@ For this gist I will be looking at the regex for searching HEX codes, which are 
 ``` 
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/.
 ``` 
-I will be explaining what the both literal and meta characters in this regex represent, and what their usages are when a user is searching for HEX codes.
+I will be explaining what the both literal and meta characters in this regex represent and what their usages are when a user is searching for HEX codes.
 
 ## Table of Contents
 
@@ -27,11 +27,19 @@ I will be explaining what the both literal and meta characters in this regex rep
 ## Regex Components
 
 ### Anchors
-Anchors are used to match the position of the string. The symbols `^` and `$` are anchors for each side of the expression, where `^a` searched for strings which begin with `a` and `b$` searches for strings which end with `b`. In the case of our HEX value regex, we can see this in the begining, where `^#` makes sure that the character string being selected begins with a `#`, and the `([a-f0-9]{6}|[a-f0-9]{3})$` makes sure that the string ends with a letter from a-f or a number from 0-9.
+Anchors are meta characters used to match the position of the string. 
+
+The symbols `^` and `$` are anchors for each side of the expression, where `^a` searches for strings which begin with `a` and `b$` searches for strings which end with `b`. In the case of our HEX value regex, we can see this in the begining, where `^#` makes sure that the character string being selected begins with a `#`, and the `([a-f0-9]{6}|[a-f0-9]{3})$` makes sure that the string ends with a letter from a-f or a number from 0-9.
 
 ### Quantifiers
+Quantifiers are used to specify how many times a certain pattern within the string must match the regex. 
+
+For example, this regex uses `?` and `{n}`. Here, at the begining of the regex, `^#?` the `?` works to indicate that the string must match the `#` at least one time. Additionally, inside the regex we see `{n}` employed with `n = 3` and `n = 6` where `([a-f0-9]{6}|[a-f0-9]{3})`. This works to ensure that the instances match n times, so that the HEX code is either 6 characters or 3 characters exactly.
 
 ### OR Operator
+OR operators, `|`, are used so that the regex will match with two different types of strings. 
+
+In our case, the OR operator splits our regex into two sections, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, into `[a-f0-9]{6}` and `[a-f0-9]{3})`. This makes it so expressions with either 6 characters or 3 characters can match the regex, as these are both accepted formats for HEX codes.
 
 ### Character Classes
 
