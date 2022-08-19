@@ -37,14 +37,18 @@ OR operators, `|`, are used so that the regex will match with two different type
 In our case, the OR operator splits our regex into two sections, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, into `[a-f0-9]{6}` and `[a-f0-9]{3})`. This makes it so expressions with either 6 characters or 3 characters can match the regex, as these are both accepted formats for HEX codes.
 
 ### Character Classes
-Character classes are 
+Character classes are used to identify and match one of the characters within the brackets to the characters being searched for. 
+
+In our example of HEX values, `[a-f0-9]` is a character class, as it  
 
 
 ### Grouping and Capturing
 Grouping and capturing refers to 
 
 ### Bracket Expressions
-Bracket expressions are
+Bracket expressions are the characters encased in the brackets of character classes. 
+
+In this case, the bracket expressions are alphanumeric charecters. We see this in the `a-f0-9` sections of our regex.
 
 ## Author
 
